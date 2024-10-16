@@ -1,17 +1,17 @@
-# Use a base image with Python
+# Use Python image
 FROM python:3.9-slim
 
 # Set the working directory
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
-COPY . /app
+# Install Flask
+RUN pip install flask
 
-# Install any necessary dependencies (none for this simple example)
-# RUN pip install -r requirements.txt
+# Copy the app script
+COPY app.py .
 
-# Define an environment variable
-ENV NAME World
+# Expose the port
+EXPOSE 5000
 
-# Run a simple Python script when the container launches
+# Run the app
 CMD ["python", "app.py"]
