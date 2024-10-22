@@ -5,7 +5,7 @@ from airflow.operators.docker_operator import DockerOperator
 
 
 default_args = {
-    'owner'                 : 'Mostafa Ghadimi',
+    'owner'                 : 'Raghunandana Krishna Murthy Sanur',
     'description'           : 'Use of the DockerOperator',
     'depend_on_past'        : False,
     'start_date'            : datetime(2023, 4, 23),
