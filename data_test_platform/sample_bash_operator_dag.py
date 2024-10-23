@@ -18,7 +18,7 @@ default_args = {
 with DAG('docker_dag_sample', default_args=default_args, schedule_interval="5 10 * * *", catchup=False) as dag:
     t1 = BashOperator(
         task_id='print_hello',
-        bash_command='echo "hello world show harish its working"'
+        bash_command='echo "Show that the demo for the RFC is working"'
     )
 
 t1
